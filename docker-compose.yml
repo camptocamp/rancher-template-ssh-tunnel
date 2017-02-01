@@ -3,10 +3,10 @@ version: '2'
 services:
   tunnel:
     image: camptocamp/ssh-tunnel:0.1
-    environment:
-      SSH_PORT: '${SSH_PORT}'
     labels:
       io.rancher.sidekicks: pki
+    ports:
+      - '${SSH_PORT}:22'
     volumes:
       - 'sshconfig:/etc/ssh'
   
