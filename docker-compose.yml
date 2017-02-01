@@ -6,11 +6,11 @@ services:
     environment:
       SSH_PORT: '${SSH_PORT}'
     labels:
-      io.rancher.sidekicks: github_pki
+      io.rancher.sidekicks: pki
     volumes:
       - 'sshconfig:/etc/ssh'
   
-  github_pki:
+  pki:
     image: camptocamp/github_pki:0.10.2
     environment:
       GITHUB_TOKEN: '${GITHUB_TOKEN}'
