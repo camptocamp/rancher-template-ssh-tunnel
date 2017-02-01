@@ -1,4 +1,5 @@
 ---
+version: '2'
 .catalog:
   name: "SSH Tunnel"
   version: "v0.1-2"
