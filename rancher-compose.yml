@@ -26,3 +26,9 @@
       description: "Additional Github users to allow"
       type: "string"
       required: false
+    - variable: "SSH_PORT"
+      label: "SSH Port"
+      description: "SSH Port to publish"
+      type: "string"
+      required: true
+      default: "2222"
