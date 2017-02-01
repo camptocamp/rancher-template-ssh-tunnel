@@ -1,9 +1,9 @@
 ---
 .catalog:
   name: "SSH Tunnel"
-  version: "v0.1-1"
+  version: "v0.1-2"
   description: "SSH tunneling stack"
-  uuid: ssh-tunnel-0
+  uuid: ssh-tunnel-1
   minimum_rancher_version: v1.0.0
   questions:
     - variable: "GITHUB_TOKEN"

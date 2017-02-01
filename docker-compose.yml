@@ -4,6 +4,8 @@ services:
     image: camptocamp/ssh-tunnel:0.1
     environment:
       SSH_PORT: ${SSH_PORT}
+    labels:
+      io.rancher.sidekicks: github_pki
     volumes:
       - 'sshconfig:/etc/ssh'
   
@@ -14,8 +16,11 @@ services:
       GITHUB_ORG: ${GITHUB_ORG}
       GITHUB_TEAM: ${GITHUB_TEAM}
       GITHUB_USERS: ${GITHUB_USERS}
-      AUTHORIZED_KEYS: /root/.ssh/authorized_keys
+      AUTHORIZED_KEYS: '/root/.ssh/authorized_keys'
+    labels:
+      io.rancher.container.start_once: 'true'
     volumes_from:
-      - tunnel
+      - 'tunnel'
+
 volumes:
   sshconfig: {}
