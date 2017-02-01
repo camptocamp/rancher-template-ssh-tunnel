@@ -1,0 +1,28 @@
+---
+.catalog:
+  name: "SSH Tunnel"
+  version: "v0.1-1"
+  description: "SSH tunneling stack"
+  uuid: ssh-tunnel-0
+  minimum_rancher_version: v1.0.0
+  questions:
+    - variable: "GITHUB_TOKEN"
+      label: "Github Token"
+      description: "Github authentication token"
+      type: "string"
+      required: true
+    - variable: "GITHUB_ORG"
+      label: "Github Organization"
+      description: "Github Organization to allow"
+      type: "string"
+      required: false
+    - variable: "GITHUB_TEAM"
+      label: "Github Team"
+      description: "Github Team to allow"
+      type: "string"
+      required: false
+    - variable: "GITHUB_USERS"
+      label: "Github Users"
+      description: "Additional Github users to allow"
+      type: "string"
+      required: false

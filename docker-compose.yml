@@ -1,0 +1,19 @@
+version: '2'
+services:
+  tunnel:
+    image: camptocamp/ssh-tunnel:0.1
+    volumes:
+      - 'sshconfig:/etc/ssh'
+  
+  github_pki:
+    image: camptocamp/github_pki:0.10.2
+    environment:
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
+      GITHUB_ORG: ${GITHUB_ORG}
+      GITHUB_TEAM: ${GITHUB_TEAM}
+      GITHUB_USERS: ${GITHUB_USERS}
+      AUTHORIZED_KEYS: /root/.ssh/authorized_keys
+    volumes_from:
+      - tunnel
+volumes:
+  sshconfig: {}
