@@ -2,7 +2,7 @@
 version: '2'
 .catalog:
   name: "SSH Tunnel"
-  version: "v0.1-8"
+  version: "v0.1.1-1"
   description: "SSH tunneling stack"
   uuid: ssh-tunnel-7
   minimum_rancher_version: v1.0.0
