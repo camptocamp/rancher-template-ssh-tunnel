@@ -2,16 +2,16 @@
 version: '2'
 .catalog:
   name: "SSH Tunnel"
-  version: "v0.1.1-1"
+  version: "v0.2.0-1"
   description: "SSH tunneling stack"
-  uuid: ssh-tunnel-7
+  uuid: ssh-tunnel-8
   minimum_rancher_version: v1.0.0
   questions:
     - variable: "GITHUB_TOKEN"
       label: "Github Token"
       description: "Github authentication token"
       type: "string"
-      required: true
+      required: false
     - variable: "GITHUB_ORG"
       label: "Github Organization"
       description: "Github Organization to allow"
@@ -33,3 +33,8 @@ version: '2'
       type: "string"
       required: true
       default: "2222"
+    - variable: "AUTHORIZED_KEYS"
+      label: "Authorized keys"
+      description: "Additional authorized keys"
+      type: "multiline"
+      required: false
