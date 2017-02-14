@@ -1,9 +1,6 @@
 # SSH Tunnel
 
-This stacks deploys an SSH tunnel service. It currently is made of two containers:
-
-* an SSH container providing the service itself
-* a pki container deploying the SSH keys
+This stacks deploys an SSH tunnel service.
 
 
 ## Whitelisting services
@@ -35,7 +32,7 @@ Host infra-tunnel
   LocalForward 8080 hello.raphink:80
   LocalForward 8081 raphink-hello-1:80
   LocalForward 8082 raphink-hello-2:80
-  User root
+  User tunnel
 ```
 
 where `<env_domain>` is the external DNS domain for the Rancher environment you deployed to.
