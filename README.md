@@ -36,3 +36,7 @@ Host infra-tunnel
 ```
 
 where `<env_domain>` is the external DNS domain for the Rancher environment you deployed to.
+
+Then don't forget to pass the `-N` flag to ssh (`Do not execute a remote command. This is useful for just forwarding ports.`):
+  `ssh -v -N infra-tunnel`
+  `curl http://localhost:8080`
